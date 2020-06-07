@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/TravelingTypewriter.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/TravelingTypewriter.ttf') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/TravelingTypewriter.ttf') format('woff'), /* Modern Browsers */
+         url('fonts/TravelingTypewriter.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/TravelingTypewriter.ttf') format('svg'); /* Legacy iOS */
+  }
+
+h1 {
+    font-family: MyFont;
+    color: #dfc782;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: MyFont;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+h3 {
+    font-family: MyFont;
+    color: black;
+    margin: auto;
+}
+
+h4 {
+    font-family: MyFont;
+    color: black;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: MyFont;
+    color: black;
+}
+
+label {
+    color: #dfc782;
+}
+
+button {
+    font-family: MyFont;
+    font-weight: bold;
+}
+
+body {
+    margin: 0 auto;
+    background-color: slategrey;
+    overflow-y: scroll;
+    background-image: url('images/library-background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    text-align: center;
+    z-index: 5;
+    padding: 10px 16px;
+    color: #f1f1f1;
+    margin-top: 25px;
+}
+
+#add-section {
+    position: relative;
+}
+
+#books-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.book-card {
+    height: 200px;
+    width: 25%;
+    border: thin solid black;
+    border-radius: 25px;
+    box-shadow:  -1px 1px black;
+    margin: 4%;
+    text-align: center;
+    background-image: url('images/paper-background.jpg');
+    background-size: cover;
+    box-shadow: 0px 3px 5px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header"
+    "author"
+    "pages"
+    "status";
+}
+
+#status {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    align-self: center;
+    grid-area: status
+}
+
+.status-icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.read-status {
+    transform: scaleX(-1);
+}
+
+.collapsible {
+    color: #dfc782;
+    background-color: rgba(57, 58, 58, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-family: MyFont;
+    outline: none;
+    font-size: 24px;
+    }
+  
+.active, .collapsible:hover {
+filter: opacity(99%);
+}
+
+.content {
+padding: 0 18px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+}
+
+.new-book {
+    text-align: center;
+}
+
+.form-content{
+    height: auto;
+    font-family: MyFont;
+    text-align: center;
+}
+
+input {
+    border-radius: 10px;
+    border: thin solid black;
+    height: 30px;
+    margin: 5px;
+    font-family: MyFont;
+    text-align: center;
+}
+
+input:hover {
+    background-color: #adadad;
+}
+
+select {
+    border-radius: 10px;
+    border: thin solid black; 
+    font-family: MyFont;
+    height: 30px;
+    text-align: center;
+}
+
+.status-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#status {
+    margin: 5px;
+}
+
+#submit {
+    width: 80px;
+    box-shadow: 0px 2px 3px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#submit:hover {
+    background-color: #adadad;
+}
+
+
+.card-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-areas: ". title exit";
+    grid-area: header;
+    overflow: hidden;
+    max-height: 82px;
+}
+
+.card-title {
+    grid-area: title;
+    overflow: hidden;
+    max-height: 82px;
+
+}
+
+.exit {
+    grid-area: exit;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.card-author {
+    grid-area: author;
+}
+
+.card-pages {
+    grid-area: pages;
+}
+
+#arrow-icon {
+    height: 15px;
+    width: 15px;
+    padding: 0px 15px;
+    transition: transform 0.5s;
+}

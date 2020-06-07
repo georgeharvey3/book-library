@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+    <div class="header" id="page-header">
+      <div class="title" id="page-title">
+        <h1>Your library</h1>
+      </div>
+      <div id="add-section">
+        <button type="button" class="collapsible">Add New Book<span class="arrow-span"><img id="arrow-icon" src='images/down-arrow (1).png'></span></button>
+          <div class="content">
+            <div class="form-content">
+              <form class="new-book">
+                <input type="text" id="title" placeholder="Title"><br>
+                <input type="text" id="author" placeholder="Author"><br>
+                <input type="text" id="pages" placeholder="Number of pages"><br>
+                <div class="status-select">
+                  <label for="status">Status: </label>
+                  <select id="status" name="status">
+                    <option value="not-read">Not Read</option>
+                    <option value="reading">Reading</option>
+                    <option value="read">Read</option>
+                  </select><br>
+                </div>
+              </form>
+              <button id="submit">Add</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="page-content" id="books-box">
+
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
